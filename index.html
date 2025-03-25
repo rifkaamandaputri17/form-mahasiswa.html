@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jual Diamond ML</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jual Diamond Mobile Legends</h1>
+    </header>
+
+    <section id="produk">
+        <div class="item">
+            <h3>86 Diamond</h3>
+            <p>Rp 20.000</p>
+            <button onclick="beli('86 Diamond', 20000)">Beli</button>
+        </div>
+        <div class="item">
+            <h3>172 Diamond</h3>
+            <p>Rp 40.000</p>
+            <button onclick="beli('172 Diamond', 40000)">Beli</button>
+        </div>
+    </section>
+
+    <section id="form-pemesanan">
+        <h2>Form Pemesanan</h2>
+        <form action="process_order.php" method="POST">
+            <label for="username">ID Mobile Legends:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="item">Paket Diamond:</label>
+            <input type="text" id="item" name="item" readonly>
+
+            <label for="harga">Harga:</label>
+            <input type="text" id="harga" name="harga" readonly>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </section>
+
+    <script>
+        function beli(item, harga) {
+            document.getElementById("item").value = item;
+            document.getElementById("harga").value = harga;
+        }
+    </script>
+</body>
+</html>
